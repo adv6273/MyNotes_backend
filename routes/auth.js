@@ -7,8 +7,8 @@ const User = require("../models/User");
 const bcrypt= require('bcryptjs');  // NPM I BCRYPTJS
 const jwt = require('jsonwebtoken'); // import jwt
 // FOR SIGNING THE WEB TOKEN
+const JWT_SECRET = process.env.JWT_SECRET;
 
-const JWT_SECRET= "aditya is a very goood comder";
 const fetchuser = require('../middleware/fetchuser');
 
 // ROUTE 1 ==>>> Create a User using : POST "/api/auth/createuser". Doesn't require Auth
