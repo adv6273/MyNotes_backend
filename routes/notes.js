@@ -104,7 +104,7 @@ router.put(
         return res.status(404).send("Note not found");
       }
       if (note.user.toString() !== req.user.id) {
-        return res.status(401).send("nikal lawde, allow nahi ho tum");
+        return res.status(401).send("NOT ALLOWED");
       }
       note = await Notes.findByIdAndUpdate(
         req.params.id,
